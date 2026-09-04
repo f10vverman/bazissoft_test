@@ -1,0 +1,25 @@
+<form class="product-form" [formGroup]="form" (ngSubmit)="submit()">
+  <tui-textfield>
+    <label tuiLabel>Название товара</label>
+    <input tuiInput type="text" formControlName="name" />
+  </tui-textfield>
+  <tui-error class="error" [formControl]="form.controls.name" />
+
+  <tui-textfield class="mt-2">
+    <label tuiLabel>Цена (без НДС)</label>
+    <input tuiInputNumber formControlName="price" [min]="0" [max]="100000000" />
+  </tui-textfield>
+  <tui-error class="error" [formControl]="form.controls.price" />
+
+  <tui-textfield class="mt-2">
+    <label tuiLabel>НДС, %</label>
+    <input tuiInputNumber formControlName="vat" [min]="0" [max]="100" [step]="1" />
+  </tui-textfield>
+  <tui-error class="error" [formControl]="form.controls.vat" />
+
+  <div class="dialog-actions mt-3">
+    <button tuiButton type="submit" [disabled]="form.invalid" appearance="primary">
+      Сохранить
+    </button>
+  </div>
+</form>

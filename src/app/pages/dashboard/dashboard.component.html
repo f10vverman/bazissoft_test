@@ -1,0 +1,58 @@
+<app-layout>
+  <section class="catalog container">
+    <div class="catalog-header">
+      <h2 class="section-title">Каталог товаров</h2>
+      <button tuiButton size="m" (click)="addProduct()">
+        Добавить товар
+      </button>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>НДС</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (product of products(); track product.id) {
+            <tr>
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | currency : 'RUB' : 'symbol-narrow' : '1.0-2' }}</td>
+              <td>{{ product.vat }}%</td>
+              <td>
+                <div class="actions">
+                  <button
+                    tuiButton
+                    size="s"
+                    appearance="secondary"
+                    (click)="editProduct(product)"
+                  >
+                    Редактировать
+                  </button>
+                  <button
+                    tuiButton
+                    size="s"
+                    appearance="negative"
+                    (click)="deleteProduct(product)"
+                  >
+                    Удалить
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+
+      @if (products().length === 0) {
+        <p class="empty">Товары не найдены</p>
+      }
+    </div>
+  </section>
+</app-layout>

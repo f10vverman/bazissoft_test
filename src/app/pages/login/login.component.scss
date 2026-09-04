@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: var(--tui-background-base);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: var(--tui-background-elevation-1);
+  border: 1px solid var(--tui-background-modifier-border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: var(--tui-shadow-4);
+}
+
+.title {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--tui-text-primary);
+  text-align: center;
+}
+
+.mt-3 {
+  width: 100%;
+}

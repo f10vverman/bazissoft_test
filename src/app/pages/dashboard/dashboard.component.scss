@@ -1,0 +1,71 @@
+.catalog {
+  padding-bottom: 32px;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--tui-text-primary);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--tui-background-modifier-border);
+  border-radius: 12px;
+  background: var(--tui-background-elevation-1);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.products-table th,
+.products-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--tui-background-modifier-border);
+  font-size: 14px;
+}
+
+.products-table thead th {
+  background: var(--tui-background-neutral-1);
+  color: var(--tui-text-secondary);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.products-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.products-table tbody tr:hover {
+  background: var(--tui-background-hover);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.empty {
+  text-align: center;
+  padding: 32px;
+  color: var(--tui-text-secondary);
+  margin: 0;
+}
+
+
